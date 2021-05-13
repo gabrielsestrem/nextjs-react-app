@@ -7,7 +7,7 @@ function Home(props) {
   const subdomain = props.langKey;
   return (
     <div>
-      Hello {subdomain}
+      Subdomain: {subdomain}
     </div>
   );
 }
