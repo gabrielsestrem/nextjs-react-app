@@ -1,10 +1,14 @@
 export async function getServerSideProps({ req }) {
   const subdomain = req.headers.host.split('.')[0];
-  return { props: { langKey: subdomain} };
+  return { 
+    props: { 
+      langKey: subdomain
+    }, 
+    revalidate: 10 
+  };
 };
 
 function Home(props) {
-  response.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
   return (
     <div>
       Subdomain: {props.langKey}
