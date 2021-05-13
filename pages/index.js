@@ -3,8 +3,7 @@ export async function getServerSideProps({ req }) {
   return { 
     props: { 
       langKey: subdomain
-    }, 
-    revalidate: 10 
+    }
   };
 };
 
