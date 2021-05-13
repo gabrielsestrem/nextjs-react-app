@@ -4,6 +4,7 @@ export async function getServerSideProps({ req }) {
 };
 
 function Home(props) {
+  response.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
   return (
     <div>
       Subdomain: {props.langKey}
