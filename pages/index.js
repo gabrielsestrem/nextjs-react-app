@@ -4,10 +4,9 @@ export async function getServerSideProps({ req }) {
 };
 
 function Home(props) {
-  const subdomain = props.langKey;
   return (
     <div>
-      Subdomain: {subdomain}
+      Subdomain: {props.langKey}
     </div>
   );
 }
